@@ -1,0 +1,301 @@
+/* ===== GOOGLE FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    color: #2d3748;
+    max-width: 920px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 60px 70px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    position: relative;
+}
+
+/* ===== DECORATIVE CORNER ===== */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+    border-radius: 0 15px 0 100%;
+    z-index: 0;
+}
+
+body>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+    font-size: 3em;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+h3 {
+    font-size: 1.6em;
+    color: #1a202c;
+    margin-top: 35px;
+    margin-bottom: 18px;
+    font-weight: 600;
+    position: relative;
+    padding-left: 25px;
+}
+
+h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 30px;
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    border-radius: 3px;
+}
+
+h4 {
+    font-size: 1.15em;
+    color: #2d3748;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+h4::before {
+    content: '▸';
+    color: #667eea;
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+/* ===== HORIZONTAL RULE ===== */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #e2e8f0 20%, #cbd5e0 50%, #e2e8f0 80%, transparent 100%);
+    margin: 25px 0;
+}
+
+/* ===== PARAGRAPHS ===== */
+p {
+    margin-bottom: 16px;
+    text-align: justify;
+    color: #4a5568;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+/* ===== LISTS ===== */
+ul {
+    margin-left: 25px;
+    margin-bottom: 18px;
+}
+
+ul li {
+    margin-bottom: 14px;
+    color: #4a5568;
+    line-height: 1.8;
+    position: relative;
+    padding-left: 10px;
+}
+
+ul li::marker {
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* Nested lists styling */
+ul ul {
+    margin-top: 12px;
+    margin-left: 30px;
+}
+
+ul ul li {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    list-style-type: circle;
+}
+
+ul ul li::marker {
+    color: #764ba2;
+}
+
+/* ===== LINKS ===== */
+a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    transition: width 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+a:hover {
+    color: #764ba2;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 2px solid #e2e8f0;
+    text-align: center;
+}
+
+footer small {
+    color: #718096;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+/* ===== SECTION SPECIFIC STYLES ===== */
+/* Removed for uniform design */
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body>* {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    html {
+        padding: 20px 15px;
+    }
+
+    body {
+        padding: 40px 30px;
+    }
+
+    h1 {
+        font-size: 2.3em;
+    }
+
+    h3 {
+        font-size: 1.4em;
+    }
+
+    ul {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        padding: 15px 10px;
+    }
+
+    body {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 1.9em;
+    }
+
+    h3 {
+        font-size: 1.25em;
+        padding-left: 20px;
+    }
+
+    h3::before {
+        height: 25px;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    html {
+        background: white;
+        padding: 0;
+    }
+
+    body {
+        box-shadow: none;
+        padding: 20px;
+        border-radius: 0;
+    }
+
+    body::before {
+        display: none;
+    }
+
+    a {
+        color: #333;
+        text-decoration: underline;
+    }
+
+    h1 {
+        -webkit-text-fill-color: #1a202c;
+        color: #1a202c;
+    }
+}
